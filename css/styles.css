@@ -20,6 +20,8 @@ section {
     width: 100%;
     box-sizing: border-box;
     top: 0;
+    z-index: 1000;
+    opacity: 0.9;
 }
 
 .judul {
@@ -27,67 +29,89 @@ section {
     font-size: 20px;
     color: white;
     gap: 10px;
+    text-decoration: none;
 }
 
 .sub-judul {
     font-size: 13px;
-    color: #5e5e5a;
+    color: #e9e9ad;
 }
 
 .menu {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 25px;
     padding: 0;
     margin: 0;
 }
 
 .menu a {
-    color: #305669;
+    color: #f8f8f8;
     text-decoration: none;
     font-size: 15px;
     transition: all 0.3s ease;
     font-weight: bold;
+    margin-right: 15px;
 }
 
 .menu a:hover {
-    color: white;
+    color: rgb(249, 247, 151);
 }
 
-.content {
+.text {
+    margin: 0;
+	padding: 0;
+	line-height: 1;
+	font-size: 40px;
+	font-weight: bold;
+	margin-left: 80px;
+	position: absolute;
+	margin-top: -620px;
+	color: #3c1616;
+	padding: 30px;
+	background-color: rgba(128, 128, 128, 0.3);
+	width :760px;
+	height: 380px;
+	text-align:left;
+}
+
+.text2 {
     margin: 0;
     padding: 0;
     line-height: 1;
-    font-size: 30px;
-    font-weight: bold;
-    margin-left: 100px;;
-}
-
-.content2 {
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-    font-size: 15px;
-    margin-left: 100px;
-    margin-top: -10px;
+    font-size: 20px;
+    margin-left: 110px;
+    margin-top: -400px;
+    position:absolute;
+    color: #e9e9ad;
 }
 
 .container {
-    gap: 20px;
-    margin-left: 100px;
-    margin-top: 200px;
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  
-    width: 700px;
+    position: relative;
+	width: 100%;
 }
 
 .p1 {
-    width: 300px;
+    width: 100%;
+	height: 100%;
     object-fit: cover;
-    margin-left: 200px;
+	position: relative;
+}
+
+.p2{
+    width: 380px;
+	height: 500px;
+	object-fit: cover;
+	position: relative;
+	object-position: center;
+	margin-left: 920px;
+	display: flex;
+	margin-top: -640px;
+	padding: 30px;
+	background-color: rgba(128, 128, 128, 0.3);
+	width :380px;
+	height: 500px;
 }
 
 .isi-layanan {
@@ -104,4 +128,8 @@ section {
 
 .isi-artikel {
     margin-left: 100px;
+}
+
+footer {
+    text-align: center;
 }

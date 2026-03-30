@@ -10,25 +10,26 @@
 
 			<nav class ="navbar">
 					<div class= "text-logo">
-					<div class="judul">EasyBusTrip</div>
-					<div class="sub-judul">Perjalanan nyaman dimulai dari sini</div>	
+					<div><a href="#" class="judul">EasyBusTrip</a></div>
+					<div class="sub-judul">Perjalanan Nyaman - Aman - Fleksibel</div>	
 					</div>
 			<ul class ="menu">
-				<li><a href="#beranda">Beranda</a></li>
 				<li><a href="#layanan">Layanan</a></li>
 				<li><a href="#armada">Armada</a></li>
                 <li><a href="#rute">Rute</a></li>
                 <li><a href="#artikel">Artikel</a></li>
 			</ul>
 		</nav>	
+            
     <section class="container">
-            <img src="assets/images/p1.jpg" alt="gambar">
-            <div class="content">
+            <img src="assets\images\p2.jpeg" alt="gambar2" class="p1">
+            
+            <div class="text">
                 <p>Nikmati kemudahan perjalanan antar kota.<br>
                     Cari rute, pilih armada,<br>
                     dan pesan tiket bus dalam satu tempat.</p>
             </div>
-            <div class="content2">
+            <div class="text2">
                 <p>Selamat datang di layanan travel terpercaya Anda.<br>
                     Kami hadir untuk memudahkan setiap perjalanan,<br>
                     mulai dari mencari rute terbaik hingga memesan <br>
@@ -38,29 +39,47 @@
                     dan tanpa ribet.</p>
 
             </div>      
-            
-            
+        
+            <img src="assets/images/p1.jpeg" alt="gambar" class="p2">
     </section>
 
     <section id="layanan">
         <div class="isi-layanan">
-            <h2>Layanan Kami</h2>
+            <h2>Yuk! Cek Jadwal Perjalananmu</h2>
             <p>Kami menyediakan layanan untuk anda yang membutuhkan akses cepat dan tepat.</p>
-            
+            <form action="#" method="post">
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" name="nama" placeholder="Masukkan nama lengkap">
+                <label for="k1">Jumlah kursi Anda:</label>
+                <select name="jumlah_kursi" id="k1">
+                    <option value="1">1</option>
+                    <option value="2">2</option> 
+                    <option value="3">3</option> 
+                    <option value="4">4</option>
+                </select>     
+                <label for="asal">Asal Anda:</label>    
+                <input type="text" name="asal" placeholder="Masukkan kota asal">
+                <label for="tujuan">Tujuan Anda</label>
+                <input type="text" name="tujuan" placeholder="Masukkan kota tujuan">
+                <label for="tanggal">Tanggal Perjalanan</label>
+                <input type="date" name="tanggal">
+                <button type="submit" class="btn">Cari Jadwal</button>
+                
+            </form>
         </div>
     </section>
 
     <section id="armada">
         <div class="isi-armada">
             <h2>Armada Kami</h2>
-            <p>Kami menyediakan fasilitas dan angkutan nyaman serta aman</p>
+            <p>Pilihlah fasilitas dan angkutan kami untuk keluarga maupun Anda sendiri yang nyaman serta aman</p>
         </div>
     </section>
 
     <section id="rute">
         <div class="isi-rute">
             <h2>Rute Kami</h2>
-            <p>Kami menyediakan berbagai rute untuk anda jelajahi</p>
+            <p>Berbagai rute kami sediakan untuk Anda jelajahi.</p>
         </div>
     </section>
 
