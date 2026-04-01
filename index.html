@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <title>My Website</title>
+    <title>Project</title>
 </head>
 <body>
 
@@ -22,7 +22,7 @@
 		</nav>	
             
     <section class="container">
-            <img src="assets\images\p2.jpeg" alt="gambar2" class="p1">
+            <img src="assets/images/p2.jpeg" alt="gambar2" class="p1">
             
             <div class="text">
                 <p>Nikmati kemudahan perjalanan antar kota.<br>
@@ -45,41 +45,125 @@
 
     <section id="layanan">
         <div class="isi-layanan">
-            <h2>Yuk! Cek Jadwal Perjalananmu</h2>
-            <p>Kami menyediakan layanan untuk anda yang membutuhkan akses cepat dan tepat.</p>
-            <form action="#" method="post">
+            <h2 class="judul-layanan">Yuk! Cek Jadwal Perjalananmu</h2>
+            <p class="text-layanan">Kami menyediakan layanan untuk anda yang membutuhkan akses<br> 
+                cepat dan tepat.Dengan jadwal yang teratur dan jelas, Anda tidak <br> 
+                perlu khawatir tentang keterlambatan atau kesulitan mengatur<br> 
+                waktu perjalanan.<br>
+                Isi form ini untuk mengisi jadwal kamu.</p>
+            <form onsubmit="event.preventDefault(); addReport();">
+                
+
                 <label for="nama">Nama Lengkap:</label>
-                <input type="text" name="nama" placeholder="Masukkan nama lengkap">
-                <label for="k1">Jumlah kursi Anda:</label>
-                <select name="jumlah_kursi" id="k1">
+                <input type="text" id="nama" placeholder="Masukkan nama lengkap" required>
+
+                <label for="kursi">Jumlah kursi Anda:</label>
+                <select id="kursi">
                     <option value="1">1</option>
                     <option value="2">2</option> 
                     <option value="3">3</option> 
                     <option value="4">4</option>
                 </select>     
+
                 <label for="asal">Asal Anda:</label>    
-                <input type="text" name="asal" placeholder="Masukkan kota asal">
-                <label for="tujuan">Tujuan Anda</label>
-                <input type="text" name="tujuan" placeholder="Masukkan kota tujuan">
-                <label for="tanggal">Tanggal Perjalanan</label>
-                <input type="date" name="tanggal">
-                <button type="submit" class="btn">Cari Jadwal</button>
-                
+                <input type="text" id="asal" placeholder="Masukkan kota asal" required>
+
+                <label for="tujuan">Tujuan Anda:</label>
+                <input type="text" id="tujuan" placeholder="Masukkan kota tujuan" required>
+
+                <label for="tanggal">Tanggal Perjalanan:</label>
+                <input type="date" id="tanggal" required>
+
+                <label for="jenis">Jenis Bus:</label>
+                <select  id="jenis">
+                    <option value="Ekonomi">Ekonomi</option>
+                    <option value="Pariwisata">Pariwisata</option>
+                    <option value="Eksekutif">Eksekutif</option>
+                    <option value="VIP">VIP</option>
+                    <option value="Sleeper">Sleeper</option>
+                    <option value="Luxury">Luxury</option>
+                </select>
+                <button type="submit" id="klik" class="btn_1">Cari Jadwal</button>
             </form>
-        </div>
-    </section>
+            <div id="hasil"></div>
+            <button onclick="batalkanTiket()" class="btn_1">Batalkan Tiket</button>
+            </div>
+</section>
+
 
     <section id="armada">
         <div class="isi-armada">
-            <h2>Armada Kami</h2>
-            <p>Pilihlah fasilitas dan angkutan kami untuk keluarga maupun Anda sendiri yang nyaman serta aman</p>
+            <h2 class="text-armada1">Pilih armada terbaik untuk perjalananmu!</h2>
+            <p class="text-armada2">Pilihlah fasilitas dan angkutan kami untuk keluarga maupun Anda sendiri yang nyaman serta aman</p>
         </div>
-    </section>
+        <div class="gambar_armada">
+            <div class="container-1">
+                <img src="assets\images\b1.jpeg">
+                <p>Armada Ekonomi</p>
+                <a href="#layanan" class="btn_armada">Pesan</a>
+            </div>   
+            <div class="container-2">
+                <img src="assets\images\b2.jpg">
+                <p>Armada Pariwisata</p>
+                <a href="#layanan" class="btn_armada">Pesan</a> 
+            </div>
+            <div class="container-3">
+                <img src="assets/images/b3.jpg">
+                <p>Armada Eksekutif</p>
+                <a href="#layanan" class="btn_armada">Pesan</a> 
+            </div>
+            <div class="container-4">
+                <img src="assets/images/b4.jpg">
+                <p>Armada VIP</p>
+                <a href="#layanan" class="btn_armada">Pesan</a> 
+            </div>
+            <div class="container-5">
+                <img src="assets/images/b5.jpg">
+                <p>Armada Sleeper</p>
+                <a href="#layanan" class="btn_armada">Pesan</a> 
+            </div>  
+            <div class="container-6">
+                <img src="assets/images/b6.jpg">
+                <p>Armada Luxury</p>
+                <a href="#layanan" class="btn_armada">Pesan</a> 
+            </div>  
+        </div>    
+        </section>
 
     <section id="rute">
-        <div class="isi-rute">
-            <h2>Rute Kami</h2>
+        <h2>Rute Kami</h2>
             <p>Berbagai rute kami sediakan untuk Anda jelajahi.</p>
+        <div class="isi-rute">
+            <div class="rute-jakarta">
+                <button class="border-rute">Jakarta → Surabaya</button>
+                <button class="border-rute">Jakarta → Bandung</button>
+                <button class="border-rute">Jakarta → Tangerang</button>
+                <button class="border-rute">Jakarta → Bogor</button>
+                <button class="border-rute">Jakarta → Bekasi</button>
+                <button class="border-rute">Jakarta → Tasikmalaya</button>
+                <button class="border-rute">Jakarta → Garut</button>
+            </div>
+            
+            </div>
+            <div class="rute-bogor">
+                <button class="border-rute">Bogor → Bandung</button>
+                <button class="border-rute">Bogor → Tasikmalaya</button>
+                <button class="border-rute">Bogor → Surabaya</button>
+                <button class="border-rute">Bogor → Tangerang</button>
+                <button class="border-rute">Bogor → Sidoarjo</button>
+                <button class="border-rute">Bogor → Jakarta</button>
+                <button class="border-rute">Bogor → Bekasi</button>
+            </div>
+            <div class="rute-bandung">
+                <button class="border-rute">Bandung → Sukabumi</button>
+                <button class="border-rute">Bandung → Solo</button>
+                <button class="border-rute">Bandung → Surabaya</button>
+                <button class="border-rute">Bandung → Tangerang</button>
+                <button class="border-rute">Bandung → Sidoarjo</button>
+                <button class="border-rute">Bandung → Jakarta</button>
+                <button class="border-rute">Bandung → Banten</button>
+            </div> 
+
         </div>
     </section>
 
@@ -88,11 +172,18 @@
             <h2>Artikel kami</h2>
             <p>Berbagai informasi kami tampilkan di sini</p>
         </div>
+        <div class="text-artikel">
+            <h4>Ini travel apa? Apakah aman untuk berpergian?</h4><br>
+            <p>Travel EasyBusTrip adalah </p>
+        </div>
+            
     </section>
 
-    <footer>
-        <p>Copyright Kel 4. All rights reserved. Designed by Kel 4.</p>
+    <footer id="bawah">
+        <p> &copy; Kel 4. All rights reserved. Designed by Kel 4.</p>
     </footer>
-</footer>
+
+    <script src="js/script.js"></script>
+    
 </body>
 </html>
