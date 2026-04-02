@@ -8,7 +8,7 @@
 </head>
 <body>
 
-			<nav class ="navbar">
+		<nav class ="navbar">
 					<div class= "text-logo">
 					<div><a href="#" class="judul">EasyBusTrip</a></div>
 					<div class="sub-judul">Perjalanan Nyaman - Aman - Fleksibel</div>	
@@ -46,35 +46,71 @@
     <section id="layanan">
         <div class="isi-layanan">
             <h2 class="judul-layanan">Yuk! Cek Jadwal Perjalananmu</h2>
-            <p class="text-layanan">Kami menyediakan layanan untuk anda yang membutuhkan akses<br> 
+                <p class="text-layanan">Kami menyediakan layanan untuk anda yang membutuhkan akses<br> 
                 cepat dan tepat.Dengan jadwal yang teratur dan jelas, Anda tidak <br> 
                 perlu khawatir tentang keterlambatan atau kesulitan mengatur<br> 
                 waktu perjalanan.<br>
-                Isi form ini untuk mengisi jadwal kamu.</p>
-            <form onsubmit="event.preventDefault(); addReport();">
-                
+                Isi form ini untuk mengisi jadwal kamu.
+                </p>
 
-                <label for="nama">Nama Lengkap:</label>
+            <div class="semua-layanan">
+            <form id="colom" class="card" onsubmit="event.preventDefault(); addReport();">
+            
+            <div clas="kolom">
+
+            <div class="flex">
+            <label for="nama">Nama Lengkap:</label>
                 <input type="text" id="nama" placeholder="Masukkan nama lengkap" required>
+            </div>
 
-                <label for="kursi">Jumlah kursi Anda:</label>
+            <div class="flex">
+            <label for="kursi">Jumlah kursi Anda:</label>
                 <select id="kursi">
                     <option value="1">1</option>
                     <option value="2">2</option> 
                     <option value="3">3</option> 
                     <option value="4">4</option>
                 </select>     
+            </div>
 
-                <label for="asal">Asal Anda:</label>    
-                <input type="text" id="asal" placeholder="Masukkan kota asal" required>
+            <div class="flex">
+            <label for="asal">Asal Anda:</label>    
+                <select id="asal">  
+                    <option value="">-- Pilih Kota Asal --</option>
+                    <option value="Bogor">Bogor</option>
+                    <option value="Bandung">Bandung</option>
+                    <option value="Jakarta">Jakarta</option>
+                </select>
+            </div>
+            </div>
 
-                <label for="tujuan">Tujuan Anda:</label>
-                <input type="text" id="tujuan" placeholder="Masukkan kota tujuan" required>
+            <div class="kolom">
+            <div class="flex">
+            <label for="tujuan">Tujuan Anda:</label>
+                <select id="tujuan">
+                    <option value="">-- Pilih Tujuan --</option>
+                    <option value="Bogor">Bogor</option>
+                    <option value="Bandung">Bandung</option>
+                    <option value="Banten">Banten</option>
+                    <option value="Bekasi">Bekasi</option>
+                    <option value="Garut">Garut</option>
+                    <option value="Jakarta">Jakarta</option>
+                    <option value="Tangerang">Tangerang</option>
+                    <option value="Tasikmalaya">Tasikmalaya</option>
+                    <option value="Surabaya">Surabaya</option>
+                    <option value="Sidoarjo">Sidoarjo</option>
+                    <option value="Sukabumi">Sukabumi</option>
+                    <option value="Solo">Solo</option>
+                </select>
+            <div>
 
-                <label for="tanggal">Tanggal Perjalanan:</label>
+            <div class="flex">
+            <label for="tanggal">Tanggal Perjalanan:</label>
                 <input type="date" id="tanggal" required>
-
-                <label for="jenis">Jenis Bus:</label>
+            </div>
+            
+            <div class="flex">
+            <label for="jenis">Jenis Bus:</label>
                 <select  id="jenis">
                     <option value="Ekonomi">Ekonomi</option>
                     <option value="Pariwisata">Pariwisata</option>
@@ -83,68 +119,76 @@
                     <option value="Sleeper">Sleeper</option>
                     <option value="Luxury">Luxury</option>
                 </select>
-                <button type="submit" id="klik" class="btn_1">Cari Jadwal</button>
-            </form>
-            <div id="hasil"></div>
-            <button onclick="batalkanTiket()" class="btn_1">Batalkan Tiket</button>
             </div>
-</section>
+            </div>
+
+            <div class="btn-group">
+                <button type="submit" id="klik" class="btn_1">Tambah Jadwal</button>
+            <div id="hasil">
+                <button onclick="batalkanTiket()" class="btn_1">Batalkan Jadwal Tiket</button>
+            </div>
+        </div>
+        </form>
+    </div>
+    </section>
 
 
     <section id="armada">
         <div class="isi-armada">
-            <h2 class="text-armada1">Pilih armada terbaik untuk perjalananmu!</h2>
+            <h2 class="text-armada1">Pilih Armada Terbaik Untuk Perjalananmu!</h2>
             <p class="text-armada2">Pilihlah fasilitas dan angkutan kami untuk keluarga maupun Anda sendiri yang nyaman serta aman</p>
         </div>
         <div class="gambar_armada">
             <div class="container-1">
                 <img src="assets\images\b1.jpeg">
-                <p>Armada Ekonomi</p>
+                    <p>Armada Ekonomi</p>
                 <a href="#layanan" class="btn_armada">Pesan</a>
             </div>   
             <div class="container-2">
                 <img src="assets\images\b2.jpg">
-                <p>Armada Pariwisata</p>
+                    <p>Armada Pariwisata</p>
                 <a href="#layanan" class="btn_armada">Pesan</a> 
             </div>
             <div class="container-3">
                 <img src="assets/images/b3.jpg">
-                <p>Armada Eksekutif</p>
+                    <p>Armada Eksekutif</p>
                 <a href="#layanan" class="btn_armada">Pesan</a> 
             </div>
             <div class="container-4">
                 <img src="assets/images/b4.jpg">
-                <p>Armada VIP</p>
+                    <p>Armada VIP</p>
                 <a href="#layanan" class="btn_armada">Pesan</a> 
             </div>
             <div class="container-5">
                 <img src="assets/images/b5.jpg">
-                <p>Armada Sleeper</p>
+                    <p>Armada Sleeper</p>
                 <a href="#layanan" class="btn_armada">Pesan</a> 
             </div>  
             <div class="container-6">
                 <img src="assets/images/b6.jpg">
-                <p>Armada Luxury</p>
+                    <p>Armada Luxury</p>
                 <a href="#layanan" class="btn_armada">Pesan</a> 
             </div>  
         </div>    
-        </section>
+    </section>
 
     <section id="rute">
-        <h2>Rute Kami</h2>
-            <p>Berbagai rute kami sediakan untuk Anda jelajahi.</p>
-        <div class="isi-rute">
+        <h2 id="judul-rute">Rute Kami</h2>
+            <p id="sub-judul">Berbagai rute kami sediakan untuk Anda jelajahi.</p>
+        <div class="isi-rute1">
+                <p class="judul-jk">Rute dari Jakarta</p>
             <div class="rute-jakarta">
-                <button class="border-rute">Jakarta → Surabaya</button>
-                <button class="border-rute">Jakarta → Bandung</button>
-                <button class="border-rute">Jakarta → Tangerang</button>
-                <button class="border-rute">Jakarta → Bogor</button>
-                <button class="border-rute">Jakarta → Bekasi</button>
-                <button class="border-rute">Jakarta → Tasikmalaya</button>
-                <button class="border-rute">Jakarta → Garut</button>
-            </div>
-            
-            </div>
+                    <button class="border-rute">Jakarta → Surabaya</button>
+                    <button class="border-rute">Jakarta → Bandung</button>
+                    <button class="border-rute">Jakarta → Tangerang</button>
+                    <button class="border-rute">Jakarta → Bogor</button>
+                    <button class="border-rute">Jakarta → Bekasi</button>
+                    <button class="border-rute">Jakarta → Tasikmalaya</button>                        <button class="border-rute">Jakarta → Garut</button>
+            </div>    
+        </div>
+
+        <div class="isi-rute2">
+                <p class="judul-bg">Rute dari Bogor</p>
             <div class="rute-bogor">
                 <button class="border-rute">Bogor → Bandung</button>
                 <button class="border-rute">Bogor → Tasikmalaya</button>
@@ -154,6 +198,10 @@
                 <button class="border-rute">Bogor → Jakarta</button>
                 <button class="border-rute">Bogor → Bekasi</button>
             </div>
+        </div>
+
+        <div class="isi-rute3">
+                <p class="judul-bn">Rute dari Bandung</p>
             <div class="rute-bandung">
                 <button class="border-rute">Bandung → Sukabumi</button>
                 <button class="border-rute">Bandung → Solo</button>
@@ -162,21 +210,43 @@
                 <button class="border-rute">Bandung → Sidoarjo</button>
                 <button class="border-rute">Bandung → Jakarta</button>
                 <button class="border-rute">Bandung → Banten</button>
-            </div> 
-
+            </div>
         </div>
     </section>
 
-    <section id="artikel">
         <div class="isi-artikel">
-            <h2>Artikel kami</h2>
-            <p>Berbagai informasi kami tampilkan di sini</p>
+            <h2>Kenapa Pilih EasyBusTrip?</h2>
+                <p>EasyBusTrip bukan hanya Travel trip biasa.Tapi kami fokus pada: kenyamanan, fasilitas,<br>
+                    ketepatan waktu, dan keamanan penumpang. Kami berusaha melakukan yang terbaik untuk Anda.</p>
         </div>
+    <section id="artikel">
         <div class="text-artikel">
-            <h4>Ini travel apa? Apakah aman untuk berpergian?</h4><br>
-            <p>Travel EasyBusTrip adalah </p>
+            <h4>EasyBusTrip</h4><br>
+                <p id="isi1">EasyBusTrip bukan sekadar layanan transportasi,<br>
+                    tetapi juga solusi perjalanan yang praktis dan nyaman.<br>
+                    Dengan berbagai keunggulan yang ditawarkan, EasyBusTrip<br>
+                    iap menemani setiap perjalanan Anda dengan pengalaman terbaik.</p>
         </div>
-            
+
+        <div class="text-artikel2">
+            <h4>Keunggulan EasyBusTrip</h4><br>
+                <p id="isi2">Keunggulan EasyBusTrip,menggunakan armada bus yang<br>
+                    nyaman dan terawat Harga tiket terjangkau Banyak pilihan <br>
+                    rute dan jadwal Pelayanan ramah dan profesional Perjalanan <br>
+                    aman dan tepat waktu.</p>
+        </div>
+
+        <div class="text-artikel3">
+            <h4>Cara Memesan Tiket EasyBusTrip</h4><br>
+            <ul id="isi3">
+                <li>Tekan pada bagian layanan</li>
+                <li>Isi nama lengkap </li>
+                <li>Pilih tujuan </li>
+                <li>Masukan jumlah kursi</li>
+                <li>Isi asal nama kota</li>
+                <li>Masukan hari pada kolom<ul>
+            </ul>        
+        </div>
     </section>
 
     <footer id="bawah">
@@ -184,6 +254,5 @@
     </footer>
 
     <script src="js/script.js"></script>
-    
 </body>
 </html>
