@@ -159,7 +159,7 @@ function bersihkanForm() {
     document.getElementById("nama").focus();
 }
 
-//add event listener click
+//add event listener click dan functionnya
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("btnTambah").addEventListener("click", tambahTiket);
     document.getElementById("btnBatal").addEventListener("click", batalkanTiket);
