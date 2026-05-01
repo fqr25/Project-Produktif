@@ -3,147 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Project</title>
+    <link rel="stylesheet" href="css\styles.css">
+    <title>EasyBusTrip</title>
 </head>
 <body>
 
-		<nav class ="navbar">
-                    <div class="logo">
-                        <img src="assets/images/logo.png" alt="logo">
-                    </div>
-					<div class= "text-logo">
-					<div><a href="#" class="judul">EasyBusTrip</a></div>
-					<div class="sub-judul">Nyaman · Aman · Fleksibel</div>	
-					</div>
-                    
-                    
-			<ul class ="menu">
-				<li><a href="#layanan">Layanan</a></li>
-				<li><a href="#armada">Armada</a></li>
-                <li><a href="#rute">Rute</a></li>
-                <li><a href="#artikel">Artikel</a></li>
-			</ul>
-		</nav>	
-            
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="logo">
+        </div>
+        <div class="text-logo">
+            <div><a href="#" class="judul">EasyBusTrip</a></div>
+            <div class="sub-judul">Nyaman · Aman · Fleksibel</div>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="menu" id="menu">
+            <li><a href="#layanan">Layanan</a></li>
+            <li><a href="#armada">Armada</a></li>
+            <li><a href="#rute">Rute</a></li>
+            <li><a href="#artikel">Artikel</a></li>
+        </ul>
+    </nav>
+
     <section class="container">
-            <img src="assets/images/p2.jpeg" alt="gambar2" class="p1">
-            
+        <img src="assets/images/p2.jpeg" alt="gambar2" class="p1">
+        <div class="hero-overlay">
             <div class="text">
                 <p>Nikmati kemudahan perjalanan antar kota.<br>
-                    Cari rute, pilih armada,<br>
-                    dan pesan tiket bus dalam satu tempat.</p>
+                Cari rute, pilih armada,<br>
+                dan pesan tiket bus dalam satu tempat.</p>
+                <p class="text2">Selamat datang di layanan travel terpercaya Anda.
+                Kami hadir untuk memudahkan setiap perjalanan,
+                mulai dari mencari rute terbaik hingga memesan
+                bus dengan cepat dan praktis.
+                Dengan berbagai pilihan armada dan jadwal yang fleksibel,
+                perjalanan Anda kini menjadi lebih nyaman, aman, dan tanpa ribet.</p>
             </div>
-            <div class="text2">
-                <p>Selamat datang di layanan travel terpercaya Anda.<br>
-                    Kami hadir untuk memudahkan setiap perjalanan,<br>
-                    mulai dari mencari rute terbaik hingga memesan <br>
-                    bus dengan cepat dan praktis.<br>
-                    Dengan berbagai pilihan armada dan jadwal yang fleksibel,<br> 
-                    perjalanan Anda kini menjadi lebih nyaman, aman,<br>
-                    dan tanpa ribet.</p>
-
-            </div>      
-        
             <img src="assets/images/p1.jpeg" alt="gambar" class="p2">
+        </div>
     </section>
 
     <section id="layanan">
         <div class="isi-layanan">
             <p class="judul-layanan">Yuk! Isi Jadwal Perjalananmu</p>
-                <p class="text-layanan">Kami menyediakan layanan untuk anda yang membutuhkan akses<br> 
-                cepat dan tepat.Dengan jadwal yang teratur dan jelas, Anda tidak <br> 
-                perlu khawatir tentang keterlambatan atau kesulitan mengatur<br> 
-                waktu perjalanan.<br>
-                Isi form ini untuk mengisi jadwal kamu.
-                </p>
+            <p class="text-layanan">Kami menyediakan layanan untuk anda yang membutuhkan akses
+                cepat dan tepat. Dengan jadwal yang teratur dan jelas, Anda tidak
+                perlu khawatir tentang keterlambatan atau kesulitan mengatur
+                waktu perjalanan.<br>Isi form ini untuk mengisi jadwal kamu.
+            </p>
         </div>
-        
-            <div class="semua-layanan">
+
+        <div class="semua-layanan">
             <form id="colom" class="card" onsubmit="event.preventDefault();">
-            
-                
-            <div class="kolom">
-            <div class="flex">
-            <label for="nama">Nama Lengkap</label>
-                <input type="text" id="nama" placeholder="Masukkan nama lengkap" required>
-            </div>
+                <div class="kolom">
+                    <div class="flex">
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" id="nama" placeholder="Masukkan nama lengkap" required>
+                    </div>
+                    <div class="flex">
+                        <label for="kursi">Jumlah Kursi</label>
+                        <select id="kursi">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                    <div class="flex">
+                        <label for="asal">Asal Anda</label>
+                        <select id="asal" required>
+                            <option value="">-- Pilih Kota Asal --</option>
+                            <option value="Bogor">Bogor</option>
+                            <option value="Bandung">Bandung</option>
+                            <option value="Jakarta">Jakarta</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="kolom">
+                    <div class="flex">
+                        <label for="tujuan">Tujuan Anda</label>
+                        <select id="tujuan" required>
+                            <option value="">-- Pilih Tujuan --</option>
+                            <option value="Bogor">Bogor</option>
+                            <option value="Bandung">Bandung</option>
+                            <option value="Banten">Banten</option>
+                            <option value="Bekasi">Bekasi</option>
+                            <option value="Garut">Garut</option>
+                            <option value="Jakarta">Jakarta</option>
+                            <option value="Tangerang">Tangerang</option>
+                            <option value="Tasikmalaya">Tasikmalaya</option>
+                            <option value="Surabaya">Surabaya</option>
+                            <option value="Sidoarjo">Sidoarjo</option>
+                            <option value="Sukabumi">Sukabumi</option>
+                            <option value="Solo">Solo</option>
+                        </select>
+                    </div>
+                    <div class="flex">
+                        <label for="tanggal">Tanggal Perjalanan</label>
+                        <input type="date" id="tanggal" required>
+                    </div>
+                    <div class="flex">
+                        <label for="jenis">Jenis Bus</label>
+                        <select id="jenis">
+                            <option value="Ekonomi">Ekonomi</option>
+                            <option value="Pariwisata">Pariwisata</option>
+                            <option value="Eksekutif">Eksekutif</option>
+                            <option value="VIP">VIP</option>
+                            <option value="Sleeper">Sleeper</option>
+                            <option value="Luxury">Luxury</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button type="button" id="btnTambah" class="btn_1">Tambah Jadwal Tiket</button>
+                </div>
+            </form>
+        </div>
 
-            <div class="flex">
-            <label for="kursi">Jumlah kursi Anda</label>
-                <select id="kursi">
-                    <option value="1">1</option>
-                    <option value="2">2</option> 
-                    <option value="3">3</option> 
-                    <option value="4">4</option>
-                </select>     
-            </div>
-
-            <div class="flex">
-            <label for="asal">Asal Anda</label>    
-                <select id="asal" required>  
-                    <option value="">-- Pilih Kota Asal --</option>
-                    <option value="Bogor">Bogor</option>
-                    <option value="Bandung">Bandung</option>
-                    <option value="Jakarta">Jakarta</option>
-                </select>
-            </div>
-            </div>
-
-            <div class="kolom">
-            <div class="flex">
-            <label for="tujuan">Tujuan Anda</label>
-                <select id="tujuan" required>
-                    <option value="">-- Pilih Tujuan --</option>
-                    <option value="Bogor">Bogor</option>
-                    <option value="Bandung">Bandung</option>
-                    <option value="Banten">Banten</option>
-                    <option value="Bekasi">Bekasi</option>
-                    <option value="Garut">Garut</option>
-                    <option value="Jakarta">Jakarta</option>
-                    <option value="Tangerang">Tangerang</option>
-                    <option value="Tasikmalaya">Tasikmalaya</option>
-                    <option value="Surabaya">Surabaya</option>
-                    <option value="Sidoarjo">Sidoarjo</option>
-                    <option value="Sukabumi">Sukabumi</option>
-                    <option value="Solo">Solo</option>
-                </select>
-            </div>
-
-            <div class="flex">
-            <label for="tanggal">Tanggal Perjalanan</label>
-                <input type="date" id="tanggal" required>
-            </div>
-            
-            <div class="flex">
-            <label for="jenis">Jenis Bus</label>
-                <select  id="jenis">
-                    <option value="Ekonomi">Ekonomi</option>
-                    <option value="Pariwisata">Pariwisata</option>
-                    <option value="Eksekutif">Eksekutif</option>
-                    <option value="VIP">VIP</option>
-                    <option value="Sleeper">Sleeper</option>
-                    <option value="Luxury">Luxury</option>
-                </select>
-            </div>
-            </div>
-            <div class="btn-group">
-                <button type="button" id="btnTambah" class="btn_1">Tambah Jadwal Tiket</button>
-            </div>
-        </form>
-
-            </div>
-        
         <div class="data-pesanan">
             <div class="tabel-card">
-            <h3>Daftar Tiket Dipesan</h3>
-            <div id="tabelTiket">
+                <h3>Daftar Tiket Dipesan</h3>
+                <div id="tabelTiket"></div>
+            </div>
+            <button id="btnBatal" class="btn_2">Batalkan Jadwal Tiket</button>
         </div>
-        </div>
-        <button id="btnBatal" class="btn_2">Batalkan Jadwal Tiket</button>
-        </div> 
-    </section> 
-
+    </section>
 
     <section id="armada">
         <div class="isi-armada">
@@ -151,159 +137,151 @@
             <p class="text-armada2">Pilihlah fasilitas dan angkutan kami untuk keluarga maupun Anda sendiri yang nyaman serta aman</p>
         </div>
         <div class="gambar_armada">
-            <div class="container-1">
-                <img src="assets/images/b1.jpg">
-                    <p>Armada Ekonomi</p>
+            <div class="armada-card">
+                <img src="assets/images/b1.jpg" alt="Armada Ekonomi">
+                <p>Armada Ekonomi</p>
                 <a href="#layanan" class="btn_armada">Pesan</a>
-            </div>   
-            <div class="container-2">
-                <img src="assets/images/b2.jpg">
-                    <p>Armada Pariwisata</p>
-                <a href="#layanan" class="btn_armada">Pesan</a> 
             </div>
-            <div class="container-3">
-                <img src="assets/images/b3.jpg">
-                    <p>Armada Eksekutif</p>
-                <a href="#layanan" class="btn_armada">Pesan</a> 
+            <div class="armada-card">
+                <img src="assets/images/b2.jpg" alt="Armada Pariwisata">
+                <p>Armada Pariwisata</p>
+                <a href="#layanan" class="btn_armada">Pesan</a>
             </div>
-            <div class="container-4">
-                <img src="assets/images/b4.jpg">
-                    <p>Armada VIP</p>
-                <a href="#layanan" class="btn_armada">Pesan</a> 
+            <div class="armada-card">
+                <img src="assets/images/b3.jpg" alt="Armada Eksekutif">
+                <p>Armada Eksekutif</p>
+                <a href="#layanan" class="btn_armada">Pesan</a>
             </div>
-            <div class="container-5">
-                <img src="assets/images/b5.jpg">
-                    <p>Armada Sleeper</p>
-                <a href="#layanan" class="btn_armada">Pesan</a> 
-            </div>  
-            <div class="container-6">
-                <img src="assets/images/b6.jpg">
-                    <p>Armada Luxury</p>
-                <a href="#layanan" class="btn_armada">Pesan</a> 
-            </div>  
-        </div>    
+            <div class="armada-card">
+                <img src="assets/images/b4.jpg" alt="Armada VIP">
+                <p>Armada VIP</p>
+                <a href="#layanan" class="btn_armada">Pesan</a>
+            </div>
+            <div class="armada-card">
+                <img src="assets/images/b5.jpg" alt="Armada Sleeper">
+                <p>Armada Sleeper</p>
+                <a href="#layanan" class="btn_armada">Pesan</a>
+            </div>
+            <div class="armada-card">
+                <img src="assets/images/b6.jpg" alt="Armada Luxury">
+                <p>Armada Luxury</p>
+                <a href="#layanan" class="btn_armada">Pesan</a>
+            </div>
+        </div>
     </section>
 
     <section id="rute">
         <div class="isirute">
-        <h2 id="judul-rute">Rute Kami</h2>
+            <h2 id="judul-rute">Rute Kami</h2>
             <p id="sub-judul">Berbagai rute kami sediakan untuk Anda jelajahi.</p>
         </div>
-        
-        <div class="isi-rute1">
-                <p class="judul-jk">Rute dari Jakarta</p>
-            <div class="rute-jakarta">
+        <div class="rute-wrapper">
+            <div class="isi-rute">
+                <p class="judul-rute-kota">Rute dari Jakarta</p>
+                <div class="rute-grid">
                     <button class="border-rute">Jakarta → Surabaya</button>
                     <button class="border-rute">Jakarta → Bandung</button>
                     <button class="border-rute">Jakarta → Tangerang</button>
                     <button class="border-rute">Jakarta → Bogor</button>
                     <button class="border-rute">Jakarta → Bekasi</button>
-                    <button class="border-rute">Jakarta → Tasikmalaya</button>                        <button class="border-rute">Jakarta → Garut</button>
-            </div>    
-        </div>
-
-        <div class="isi-rute2">
-                <p class="judul-bg">Rute dari Bogor</p>
-            <div class="rute-bogor">
-                <button class="border-rute">Bogor → Bandung</button>
-                <button class="border-rute">Bogor → Tasikmalaya</button>
-                <button class="border-rute">Bogor → Surabaya</button>
-                <button class="border-rute">Bogor → Tangerang</button>
-                <button class="border-rute">Bogor → Sidoarjo</button>
-                <button class="border-rute">Bogor → Jakarta</button>
-                <button class="border-rute">Bogor → Bekasi</button>
+                    <button class="border-rute">Jakarta → Tasikmalaya</button>
+                    <button class="border-rute">Jakarta → Garut</button>
+                </div>
             </div>
-        </div>
-
-        <div class="isi-rute3">
-                <p class="judul-bn">Rute dari Bandung</p>
-            <div class="rute-bandung">
-                <button class="border-rute">Bandung → Sukabumi</button>
-                <button class="border-rute">Bandung → Solo</button>
-                <button class="border-rute">Bandung → Surabaya</button>
-                <button class="border-rute">Bandung → Tangerang</button>
-                <button class="border-rute">Bandung → Sidoarjo</button>
-                <button class="border-rute">Bandung → Jakarta</button>
-                <button class="border-rute">Bandung → Banten</button>
+            <div class="isi-rute">
+                <p class="judul-rute-kota">Rute dari Bogor</p>
+                <div class="rute-grid">
+                    <button class="border-rute">Bogor → Bandung</button>
+                    <button class="border-rute">Bogor → Tasikmalaya</button>
+                    <button class="border-rute">Bogor → Surabaya</button>
+                    <button class="border-rute">Bogor → Tangerang</button>
+                    <button class="border-rute">Bogor → Sidoarjo</button>
+                    <button class="border-rute">Bogor → Jakarta</button>
+                    <button class="border-rute">Bogor → Bekasi</button>
+                </div>
+            </div>
+            <div class="isi-rute">
+                <p class="judul-rute-kota">Rute dari Bandung</p>
+                <div class="rute-grid">
+                    <button class="border-rute">Bandung → Sukabumi</button>
+                    <button class="border-rute">Bandung → Solo</button>
+                    <button class="border-rute">Bandung → Surabaya</button>
+                    <button class="border-rute">Bandung → Tangerang</button>
+                    <button class="border-rute">Bandung → Sidoarjo</button>
+                    <button class="border-rute">Bandung → Jakarta</button>
+                    <button class="border-rute">Bandung → Banten</button>
+                </div>
             </div>
         </div>
     </section>
 
-        <div class="isi-artikel">
-            <p id="judul-artikel">Kenapa Pilih EasyBusTrip?</p>
-                <p id="sub-artikel">EasyBusTrip bukan hanya Travel trip biasa.Tapi juga kami fokus pada: kenyamanan, fasilitas,<br>
-                    ketepatan waktu, dan keamanan penumpang. Kami berusaha melakukan yang terbaik untuk Anda.</p>
-        </div>
+    <div class="isi-artikel">
+        <p id="judul-artikel">Kenapa Pilih EasyBusTrip?</p>
+        <p id="sub-artikel">EasyBusTrip bukan hanya Travel trip biasa. Tapi juga kami fokus pada: kenyamanan, fasilitas,
+            ketepatan waktu, dan keamanan penumpang. Kami berusaha melakukan yang terbaik untuk Anda.</p>
+    </div>
 
     <section id="artikel">
-        <div class="text-artikel">
-            <h4>EasyBusTrip</h4><br>
-                <p id="isi1">EasyBusTrip bukan sekadar layanan transportasi,<br>
-                    tetapi juga solusi perjalanan yang praktis dan nyaman.<br>
-                    Dengan berbagai keunggulan yang ditawarkan, EasyBusTrip<br>
+        <div class="artikel-grid">
+            <div class="text-artikel">
+                <h4>EasyBusTrip</h4>
+                <p class="isi-artikel-text">EasyBusTrip bukan sekadar layanan transportasi,
+                    tetapi juga solusi perjalanan yang praktis dan nyaman.
+                    Dengan berbagai keunggulan yang ditawarkan, EasyBusTrip
                     siap menemani setiap perjalanan Anda dengan pengalaman terbaik.</p>
+            </div>
+            <div class="text-artikel">
+                <h4>Keunggulan EasyBusTrip</h4>
+                <p class="isi-artikel-text">Menggunakan armada bus yang nyaman dan terawat. Harga tiket terjangkau.
+                    Banyak pilihan rute dan jadwal. Pelayanan ramah dan profesional.
+                    Perjalanan aman dan tepat waktu.</p>
+            </div>
+            <div class="text-artikel">
+                <h4>Cara Memesan Tiket</h4>
+                <ul class="isi-artikel-text">
+                    <li>Tekan pada bagian layanan</li>
+                    <li>Isi nama lengkap</li>
+                    <li>Pilih tujuan</li>
+                    <li>Masukan jumlah kursi</li>
+                    <li>Isi asal nama kota</li>
+                    <li>Masukan hari pada kolom</li>
+                    <li>Pilih jenis bis yang ingin digunakan</li>
+                </ul>
+            </div>
+            <div class="text-artikel">
+                <h4>Fasilitas Armada</h4>
+                <ul class="isi-artikel-text">
+                    <li>Kursi yang nyaman</li>
+                    <li>AC</li>
+                    <li>Bagasi yang Luas</li>
+                    <li>Mini Toilet</li>
+                </ul>
+            </div>
+            <div class="text-artikel">
+                <h4>Kepercayaan Customer</h4>
+                <p class="isi-artikel-text">Kepercayaan pelanggan adalah prioritas kami. Kami selalu berkomitmen memberikan
+                    pelayanan yang jujur, aman, dan tepat waktu di setiap perjalanan.</p>
+            </div>
         </div>
-
-        <div class="text-artikel2">
-            <h4>Keunggulan EasyBusTrip</h4><br>
-                <p id="isi2">Keunggulan EasyBusTrip,menggunakan armada bus yang <br>
-                    nyaman dan terawat Harga tiket terjangkau Banyak pilihan <br>
-                    rute dan jadwal Pelayanan ramah dan profesional Perjalanan <br>
-                    aman dan tepat waktu.</p>
-        </div>
-
-        <div class="text-artikel3">
-            <h4>Cara Memesan Tiket EasyBusTrip</h4><br>
-            <ul id="isi3">
-                <li>Tekan pada bagian layanan</li>
-                <li>Isi nama lengkap </li>
-                <li>Pilih tujuan </li>
-                <li>Masukan jumlah kursi</li>
-                <li>Isi asal nama kota</li>
-                <li>Masukan hari pada kolom</li>
-                <li>Pilih jenis bis yang ingin digunakan</li>
-            </ul>        
-        </div>
-
-        <div class="text-artikel4">
-            <h4>Kenyamanan dan Fasilitas Armada</h4><br>
-        <ul id="isi4">
-            <li>Kursi yang nyaman</li>
-            <li>AC</li>
-            <li>Bagasi yang Luas</li>
-            <li>Mini Toilet</li>
-        </ul>
-        </div>
-
-        <div class="text-artikel5">
-            <h4>Kepercayaan Customer</h4><br>
-        <p id="isi5">
-            Kepercayaan pelanggan adalah prioritas kami. Kami selalu berkomitmen memberikan<br>
-            pelayanan yang jujur, aman, dan tepat waktu di setiap perjalanan.
-        </p>
-            
-        </div>
-
     </section>
 
-
     <footer id="bawah">
-        <p> &copy; Kel 4. All rights reserved. <strong>Designed by Kel 4.</strong></p>
+        <p>&copy; Kel 4. All rights reserved. <strong>Designed by Kel 4.</strong></p>
     </footer>
 
     <div id="edit">
         <div class="edit-box">
             <h3>Edit Tiket</h3>
             <div class="flex">
-                <label for ="editNama">Nama Lengkap:</label>
-                <input type="text" id="editNama" placeholder="Masukkan Nama Lengkap:">
+                <label for="editNama">Nama Lengkap:</label>
+                <input type="text" id="editNama" placeholder="Masukkan Nama Lengkap">
             </div>
             <div class="flex">
                 <label for="editKursi">Jumlah Kursi:</label>
                 <select id="editKursi">
                     <option value="1">1</option>
-                    <option value="2">2</option> 
-                    <option value="3">3</option> 
+                    <option value="2">2</option>
+                    <option value="3">3</option>
                     <option value="4">4</option>
                 </select>
             </div>
@@ -352,9 +330,10 @@
             <div class="btn-group-edit">
                 <button type="button" id="btnSimpanEdit" class="btn-edit">Simpan Perubahan</button>
                 <button id="btnBatalEdit" class="btn-edit">Batal</button>
-            </div>    
+            </div>
         </div>
     </div>
-    <script src="js/script.js"></script>
+
+    <script src="js\script.js"></script>
 </body>
 </html>

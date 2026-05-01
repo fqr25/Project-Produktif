@@ -168,3 +168,19 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 tampilkanTiket();
+
+        //menu hamburger
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu');
+        hamburger.addEventListener('click', () => {
+            menu.classList.toggle('open');
+            hamburger.classList.toggle('active');
+        });
+
+        //tutup menu
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.remove('open');
+                hamburger.classList.remove('active');
+            });
+        });
